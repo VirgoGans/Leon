@@ -3,7 +3,7 @@
 
 ## Deploy & Run Leon
 
-[![Run on Repl.it](https://repl.it/badge/github/TOXIC-DEVIL/Leon)](https://replit.com/@TOXICDEVIL/Leon)
+[![Run on Repl.it](https://repl.it/badge/github/TOXIC-DEVIL/Leon)](https://replit.com/@TOXIC-DEVIL/Leon)
 
 ### Railway
 
