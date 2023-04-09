@@ -1,0 +1,52 @@
+{
+  "name": "Leon",
+  "version": "1.0.0",
+  "description": "Created to be unique.",
+  "main": "./handler.js",
+  "scripts": {
+    "start": "node handler.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TOXIC-DEVIL/Leon.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "leon",
+    "md",
+    "baileys"
+  ],
+  "author": "TOXIC-DEVIL",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TOXIC-DEVIL/Leon/issues"
+  },
+  "homepage": "https://github.com/TOXIC-DEVIL/Leon#readme",
+  "dependencies": {
+    "@adiwajshing/baileys": "^4.4.0",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "instagram-url-direct": "^1.0.13",
+    "google-tts-api": "^2.0.2",
+    "translate-google-api": "^1.0.4",
+    "node-webpmux": "^3.1.5",
+    "remove.bg": "^1.3.0",
+    "acrcloud": "^1.4.0",
+    "qrcode": "^1.5.1",
+    "http": "^0.0.1-security",
+    "file-type": "^10.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^4.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "g-i-s": "^2.1.6",
+    "cookie": "^0.5.0",
+    "chalk": "4.1.0",
+    "got": "^11.8.2",
+    "pino": "^7.0.5",
+    "jimp": "^0.16.0",
+    "simple-git": "^2.37.0",
+    "sequelize": "^6.5.1",
+    "sqlite3": "^5.0.0"
+  }
+}
