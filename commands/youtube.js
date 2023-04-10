@@ -1,10 +1,10 @@
 let { onCommand, loadLanguage, youtube } = require('../main/');
-let { downloading, searching, yes, no, video_info, channel_info, need_query, not_found_query, yt_url_need, yt_url_invalid } = loadLanguage();
+let { yta_desc, yts_desc, video_desc, channel_desc, downloading, searching, yes, no, video_info, channel_info, need_query, not_found_query, yt_url_need, yt_url_invalid } = loadLanguage();
 
 onCommand(
   {
    command: 'yta',
-   desc: 'yta',
+   desc: yta_desc,
    category: ['misc']
   }, async (msg, text, client) => {
 
@@ -18,7 +18,7 @@ onCommand(
 onCommand(
   {
    command: 'yts',
-   desc: 'yts',
+   desc: yts_desc,
    category: ['misc']
   }, async (msg, text, client) => {
 
@@ -33,7 +33,7 @@ onCommand(
 onCommand(
   {
    command: 'channel',
-   desc: 'yt channel stalk',
+   desc: channel_desc,
    category: ['misc']
   }, async (msg, text, client) => {
 
@@ -47,7 +47,7 @@ onCommand(
 onCommand(
   {
    command: 'video',
-   desc: 'yt video stalk',
+   desc: video_desc,
    category: ['misc']
   }, async (msg, text, client) => {
 
