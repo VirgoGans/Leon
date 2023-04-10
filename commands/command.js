@@ -63,5 +63,5 @@ onCommand(
      delete require.cache[require.resolve('../commands/external/' + text[1] + '.js')]
      fs.unlinkSync('../commands/external/' + text[1] + '.js');
      await removeCommand(text[1]);
-     await msg.reply(deleted_command.format(command_name));
+     await msg.reply(deleted_command.format(text[1]));
 });
