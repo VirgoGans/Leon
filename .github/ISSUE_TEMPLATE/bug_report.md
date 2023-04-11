@@ -10,5 +10,6 @@ assignees: 'TOXIC-DEVIL'
 **Describe your issue:**
 
 
-- **Deployed on (HEROKU/RAILWAY) :** 
-- **MODE (PRIVATE/PUBLIC) :** 
+- **Deployed on ( HEROKU / RAILWAY ) :** 
+- **MODE ( PRIVATE / PUBLIC ) :** 
+- **Upload screenshots: ( OPTIONAL ) :**
