@@ -11,7 +11,6 @@ let { default: connect, useMultiFileAuthState, fetchLatestBaileysVersion, Discon
 String.prototype.format = function () { var i = 0, args = arguments; return this.replace(/{}/g, function () { return typeof args[i] != 'undefined' ? args[i++] : '' }) };
 
 async function initialize() {
-  await config.DATABASE.sync();
   await bindPort();
   let { client, store, saveCreds } = await bot.connect();
 
