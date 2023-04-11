@@ -11,5 +11,7 @@ assignees: 'TOXIC-DEVIL'
 
 
 - **Deployed on ( HEROKU / RAILWAY ) :** 
+###
 - **MODE ( PRIVATE / PUBLIC ) :** 
+###
 - **Upload screenshots: ( OPTIONAL ) :**
