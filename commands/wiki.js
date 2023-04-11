@@ -11,6 +11,6 @@ onCommand(
   if (!text[1]) return await msg.reply(wiki_need);
   let wiki = await wikipedia(text[1]), info = '';
   if (!wiki) info = wiki_invalid;
-  info = wiki_result.format(wiki.title, encodeURIComponent(wiki.url));
+  info = wiki_result.format(wiki.title, wiki.info, encodeURIComponent(wiki.url));
   return await msg.reply(info);
 });
