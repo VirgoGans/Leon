@@ -8,7 +8,16 @@ let pino = require('pino');
 let { DataTypes } = require('sequelize');
 let { default: connect, useMultiFileAuthState, fetchLatestBaileysVersion, DisconnectReason, makeInMemoryStore, jidDecode, getContentType } = require('@adiwajshing/baileys');
 
-String.prototype.format = function () { var i = 0, args = arguments; return this.replace(/{}/g, function () { return typeof args[i] != 'undefined' ? args[i++] : '' }) };
+String.prototype.format = function () {
+ var i = 0, args = arguments;
+ return this.replace(/{}/g, function () {
+  return typeof args[i] != 'undefined' ? args[i++] : ''
+ })
+};
+
+Array.prototype.random = function () {
+ return this[Math.floor((Math.random() * this.length))];
+}
 
 async function initialize() {
   await bindPort();
