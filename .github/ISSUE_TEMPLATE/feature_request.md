@@ -10,7 +10,7 @@ assignees: 'TOXIC-DEVIL'
 **Describe how your feature/command works?**
 
 
-- **This command is for (GroupChat/PrivateChat/Admin/Owner/Common) :** 
-- **Suggest a name for command ( Optional ) :** 
-- **How this command helps you? ( Optional ) :** 
-- **Upload screenshots: ( Optional ) :**
+- **This command is for ( GroupChat / PrivateChat / Admin / Owner / Common) :** 
+- **Suggest a name for command ( OPTIONAL ) :** 
+- **How this command helps you? ( OPTIONAL ) :** 
+- **Upload screenshots: ( OPTIONAL ) :**
