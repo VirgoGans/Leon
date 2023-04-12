@@ -7,7 +7,7 @@ assignees: 'TOXIC-DEVIL'
 
 ---
 
-**Describe your issue:**
+**Describe your issue ( include error message if occurred ) :**
 
 
 ##
@@ -16,4 +16,4 @@ assignees: 'TOXIC-DEVIL'
 ###
 - **MODE ( PRIVATE / PUBLIC ) :** 
 ###
-- **Upload screenshots: ( OPTIONAL ) :**
+- **Upload screenshots or Error message: ( OPTIONAL ) :**
