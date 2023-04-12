@@ -160,6 +160,7 @@ module.exports = {
  need_movie: '_Please enter any movie name!_',
  unable_movie: '*❌ Unable to find a movie in this name!*',
  movie_info: '_Title_ : *{}*\n_Year_ : *{}*\n_Released_ : *{}*\n_DVD Released_ : *{}*\n_Rated_ : *{}*\n_Runtime_ : *{}*\n_Genre_ : *{}*\n_Director_ : *{}*\n_Writer_ : *{}*\n_Actors_ : *{}*\n_Language_ : *{}*\n_Country_ : *{}*\n_Awards_ : *{}*\n_Ratings_ : *{}*\n_Votes_ : *{}*\n_Website_ : *{}*',
+ gcinfo: '_ID_ : *{}*\n_Title_ : *{}*\n_Titled By_ : *{}*\n_Titled At_ : *{}*\n_Group Created By_ : *{}*\n_Group Created At_ : *{}*\n_Total Members_ : *{}*\n_Total Admins_ : *{}*\n_Total Participants_ : *{}*\n_Send Message_ : *{}*\n_Edit Group Info_ : *{}*\n_Disappearing Message_ : {}',
  unknown: 'Unknown',
  need_gc_subject: '_Please enter a subject/title for creating group!_',
  long_gc_subject: '*❌ Sorry, The subject/title you entered is too long, Maximum 25 characters only!*',
