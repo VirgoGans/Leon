@@ -1,5 +1,5 @@
 let { onCommand, loadLanguage, cut } = require('../main/');
-let { need_aud_vid, need_audvid_only, need_timeline, greater_timeline } = loadLanguage();
+let { cut_desc, need_aud_vid, need_audvid_only, need_timeline, greater_timeline } = loadLanguage();
 let config = require('../main/config');
 let { exec } = require('child_process');
 let fs = require('fs');
@@ -8,7 +8,7 @@ let ffmpeg = require('fluent-ffmpeg');
 onCommand(
   {
    command: 'cut',
-   desc: 'cut',
+   desc: cut_desc,
    category: ['misc']
   }, async (msg, text, client) => {
 

@@ -1,5 +1,5 @@
 let { onCommand, loadLanguage } = require('../main/');
-let { kick_desc, add_desc, link_desc, revoke_desc, promote_desc, demote_desc, greet_desc, mute_desc, unmute_desc, tagall_desc, gcinfo_desc, need_rm, added, kicked, promoted, demoted, kick_myself, promote_myself, demote_myself, revoked, gc_link, sender_not_admin, me_not_admin, muted, unmuted, need_add, no_type_greet, del_desc, leave_desc, del_reply, leaving, leaving_from, reply_greet, need_replymsg, unsupported_replymsg } = loadLanguage();
+let { kick_desc, add_desc, link_desc, revoke_desc, promote_desc, demote_desc, greet_desc, mute_desc, unmute_desc, tagall_desc, gcinfo_desc, tag_desc, need_rm, added, kicked, promoted, demoted, kick_myself, promote_myself, demote_myself, revoked, gc_link, sender_not_admin, me_not_admin, muted, unmuted, need_add, no_type_greet, gcinfo, del_desc, leave_desc, del_reply, leaving, leaving_from, reply_greet, need_replymsg, unsupported_replymsg } = loadLanguage();
 let greetings = require('../database/greetings');
 
 onCommand(
@@ -214,7 +214,7 @@ onCommand(
   }, async (msg, text, client) => {
 
    let group = await client.groupInfo(msg.chat);
-   let info = '_ID_ : *'+group.id+'*\n_Title_ : *'+group.title+'*\n_Titled By_ : *'+'@'+group.titled.by.split('@')[0]+'*\n_Titled At_ : *'+group.titled.at.time+'*\n_Group Created By_ : *'+'@'+group.groupCreated.by.split('@')[0]+'*\n_Group Created At_ : *'+group.groupCreated.at.time+'*\n_Total Members_ : *'+group.participants.total.members+'*\n_Total Admins_ : *'+group.participants.total.admins+'*\n_Total Participants_ : *'+group.participants.total.all+'*\n_Send Message_ : *'+(group.settings.muted == false ? 'Everyone' : 'Admins')+'*\n_Edit Group Info_ : *'+(group.settings.editinfo == 'admins' ? 'Admins' : 'Everyone')+'*\n_Disappearing Message_ : '+(group.ephemeralDuration == undefined ? '*OFF*' : '*ON ( '+group.ephemeralDuration+' )')+'*'
+   let info = gcinfo.format(group.id, group.title, '@'+group.titled.by.split('@')[0], group.titled.at.time, '@'+group.groupCreated.by.split('@')[0], group.groupCreated.at.time, group.participants.total.members, group.participants.total.admins, group.participants.total.all, (group.settings.muted == false ? 'Everyone' : 'Admins'), (group.settings.editinfo == 'admins' ? 'Admins' : 'Everyone'), (group.ephemeralDuration == undefined ? '*OFF*' : '*ON ( '+group.ephemeralDuration+' )*'));
    try {
     await client.sendMessage(msg.chat, { image: { url: group.profile }, mimetype: 'image/png', caption: info, mentions: [group.titled.by, group.groupCreated.by] });
    } catch {
@@ -260,7 +260,7 @@ onCommand(
 onCommand(
   {
    command: 'tag',
-   desc: 'tag',
+   desc: tag_desc,
    category: ['group','admin','owner']
   }, async (msg, text, client) => {
 
