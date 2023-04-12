@@ -13,6 +13,8 @@ module.exports = {
  font_desc: 'Converts replied text to different fonts.',
  upload_desc: 'Uploads the replied image and fetches its url.',
  download_desc: 'Downloads the uploaded image url to an image.',
+ tag_desc: 'Sends the replied message with hidden mention to all members in group.',
+ cut_desc: 'Cuts the replied audio/video with provided timeline.',
  document_desc: 'Converts replied media to document.',
  tr_desc: 'Translates text to provided language using Google Translator.',
  image_desc: 'Downloads image for your query from google.',
