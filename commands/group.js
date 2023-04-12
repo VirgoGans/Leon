@@ -1,5 +1,5 @@
 let { onCommand, loadLanguage } = require('../main/');
-let { kick_desc, add_desc, link_desc, revoke_desc, promote_desc, demote_desc, greet_desc, mute_desc, unmute_desc, tagall_desc, gcinfo_desc, need_rm, added, kicked, promoted, demoted, kick_myself, promote_myself, demote_myself, revoked, gc_link, sender_not_admin, me_not_admin, muted, unmuted, need_add, no_type_greet, del_desc, leave_desc, del_reply, leaving, leaving_from, reply_greet, need_replymsg, unsupported_replymsg } = loadLanguage();
+let { kick_desc, add_desc, link_desc, revoke_desc, promote_desc, demote_desc, greet_desc, mute_desc, unmute_desc, tagall_desc, gcinfo_desc, tag_desc, need_rm, added, kicked, promoted, demoted, kick_myself, promote_myself, demote_myself, revoked, gc_link, sender_not_admin, me_not_admin, muted, unmuted, need_add, no_type_greet, del_desc, leave_desc, del_reply, leaving, leaving_from, reply_greet, need_replymsg, unsupported_replymsg } = loadLanguage();
 let greetings = require('../database/greetings');
 
 onCommand(
@@ -260,7 +260,7 @@ onCommand(
 onCommand(
   {
    command: 'tag',
-   desc: 'tag',
+   desc: tag_desc,
    category: ['group','admin','owner']
   }, async (msg, text, client) => {
 
