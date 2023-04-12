@@ -8,6 +8,9 @@ module.exports = {
     LANG: process.env.LANGUAGE !== '' ? process.env.LANGUAGE : 'eng',
     MODE: process.env.MODE !== '' ? process.env.MODE : 'private',
     AUTOSV: process.env.AUTO_STATUSVIEW !== '' ? process.env.AUTO_STATUSVIEW : 'false',
+    OPENAIKEY: process.env.OPENAI_KEY !== '' ? process.env.OPENAI_KEY : 'false',
+    IMGBBKEY: process.env.IMGBB_APIKEY !== '' ? process.env.IMGBB_APIKEY : 'false',
+    RBGKEY: process.env.RBG_APIKEY !== '' ? process.env.RBG_APIKEY : 'false',
     ADMINS: process.env.ADMINS !== '' ? process.env.ADMINS : 'false',
     DATABASE_URL: DATABASE_URL,
     DATABASE: DATABASE_URL === './leon.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: false })

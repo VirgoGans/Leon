@@ -1,13 +1,14 @@
 let { onCommand, loadLanguage, removeBackground } = require('../main/');
-let { need_image, need_image_only } = loadLanguage();
+let { rbg_desc, need_image, need_image_only, missing_rbgkey } = loadLanguage();
 let { exec } = require('child_process');
 let fs = require('fs');
+let config = require('../main/config');
 let ffmpeg = require('fluent-ffmpeg');
 
 onCommand(
   {
    command: 'rbg',
-   desc: 'remove bg',
+   desc: rbg_desc,
    category: ['misc']
   }, async (msg, text, client) => {
 
@@ -16,7 +17,8 @@ onCommand(
 
   let media = await msg.load(msg.replied.image);
   fs.writeFileSync('../src/image.png', media);
-  let rbg = await removeBackground('../src/image.png');
+  let rbg = await removeBackground('../src/image.png', config.RBGKEY);
+  if (!rbg) return await msg.reply(missing_rbgkey);
 
   await client.sendReply({ type: 'image', message: fs.readFileSync(rbg) });
   fs.unlinkSync('../src/image.png');
