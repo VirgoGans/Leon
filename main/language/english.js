@@ -179,6 +179,8 @@ module.exports = {
  find_info: '_Title_ : *{}*\n_Artists_ : *{}*\n_Released_ : *{}*\n_Album_ : *{}*\n_Genres_ : {}',
  upload_url: '_Please enter a url of an uploaded image!_',
  upload_url_inv: '*❌ Invalid url, Please enter a valid url of an uploaded image!*',
+ missing_key_imgbb: '*You haven\'t provided a imgbb apikey yet.*\n_You can get a imgbb apikey from_ https://api.imgbb.com/',
+ inv_key_imgbb: '*Provided key is invalid or expired!*\n_Get another apikey from_ https://api.imgbb.com/',
  unable_down: '*❌ Unable to download!*',
  unable_download: '*❌ Unable to download. Entered url may be not direct or invalid!*',
  searching: '*🔎 Searching...*',
