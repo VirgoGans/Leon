@@ -215,6 +215,7 @@ module.exports = {
  only_text_greet: '*❌ Reply to any text only!*',
  suc_greet: '*✅ Successfully set {} message!*',
  alive_message: '*Hey {},*\n*I\'m still alive!*',
+ error_message: '*ERROR LOG*\n\n_An error occurred! You can open an issue on TOXIC-DEVIL/Leon for a fix._\n*Open an issue:* https://bit.ly/43kG9jU\n\n*Error:* ```{}```',
  alive_footer: '_Name_ : *{}*\n_ID_ : *{}*\n_Number_ : *{}*\n_Total Commands_ : *{}*',
  menu: 'MENU'
 };
