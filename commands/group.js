@@ -264,7 +264,7 @@ onCommand(
    category: ['group','admin','owner']
   }, async (msg, text, client) => {
 
-  if (text[1].includes('all')) return;
+  if (text[0].includes('all')) return;
   if (!msg.isGroupChat && !msg.fromMe) return;
   if (msg.isGroupChat && msg.sender !== msg.me && msg.isAdmin(msg.sender) !== true) return await msg.reply(sender_not_admin);
   let q = text[1] !== '' ? text[1] : msg.replied ? msg.replied : false
