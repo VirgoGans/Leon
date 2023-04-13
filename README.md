@@ -19,6 +19,8 @@
  <h1>Leon</h1>
 </div>
 
+**Join official channel where you can find updates and information about Leon: [@leon_wabot](https://t.me/leon_wabot)**
+
 ## ⚠️ NOTE:
 
 **Your WhatsApp account may be banned by using Leon and other WhatsApp Bots.**
