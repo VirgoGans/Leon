@@ -40,7 +40,7 @@ onCommand(
   if (lang = query.match('\\{([a-zA-Z]{2})\\}')) {
    lang = lang[1]
   } else {
-   return await msg.reply(need_lang_tr);
+   return await msg.reply(need_lang_tr.replace('{}', prefix, 1));
   }
   let result = await translator(query.replace(/\{([a-zA-Z]{2})\}/g, ''), { tld: 'com', to: lang });
   await msg.reply(result[0]);
