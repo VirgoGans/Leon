@@ -1,4 +1,5 @@
 let { isCommand, serializeMessage, serializeClient, getTextMessage, commands, loadAuthID, formatTime, msToTime, loadLanguage, updateStore, connectionUpdate, bindPort } = require('./main/');
+let { error_message } = loadLanguage();
 let bot = require('./main/auth');
 let got = require('got');
 let path = require('path');
@@ -100,7 +101,7 @@ async function initialize() {
            await command.function(msg, text, client);
          } catch (error) {
            console.log(error.stack?.toString(), 'failed');
-           await msg.reply('*ERROR LOG*\n\n'+error.toString(), client.user.id);
+           await msg.reply(error_message.format(error.toString()), client.user.id);
          }
        }
     }});

@@ -1,6 +1,7 @@
 let { onCommand, loadLanguage, fetchJson, fetchLyrics, truecaller, bufferFrom } = require('../main/');
 let { compliment_desc, joke_desc, quote_desc, lyrics_desc, tti_desc, truecaller_desc, need_song, gpt_desc, chat_gpt, missing_openai, expired_openai, lyrics_nf, need_prompt, need_num, inv_num_true } = loadLanguage();
 let fs = require('fs');
+let config = require('../main/config');
 let ai = require('../main/ai');
 let ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
 let ffmpeg = require('fluent-ffmpeg');

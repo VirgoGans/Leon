@@ -35,12 +35,13 @@ onCommand(
    category: ['misc']
   }, async (msg, text, client) => {
 
+  if (msg.text.split(msg.text.charAt(0))[1].startsWith('true')) return;
   let query = text[1] !== '' ? text[1] : msg.replied.text ? msg.replied.text : false
   if (!query) return await msg.reply(tr_need);
   if (lang = query.match('\\{([a-zA-Z]{2})\\}')) {
    lang = lang[1]
   } else {
-   return await msg.reply(need_lang_tr);
+   return await msg.reply(need_lang_tr.replace('{}', prefix, 1));
   }
   let result = await translator(query.replace(/\{([a-zA-Z]{2})\}/g, ''), { tld: 'com', to: lang });
   await msg.reply(result[0]);

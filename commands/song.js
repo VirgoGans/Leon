@@ -1,5 +1,5 @@
 let { onCommand, loadLanguage, findSong } = require('../main/');
-let { find_desc, need_audio, need_aud_only, find_failed, find_info, song_desc, need_song, song_not_found, downloading, unknown } = loadLanguage();
+let { find_desc, need_audio, need_aud_only, audio_length_exceed, find_failed, find_info, song_desc, need_song, song_not_found, downloading, unknown } = loadLanguage();
 let { downloadSong } = require('../main/main');
 
 onCommand(

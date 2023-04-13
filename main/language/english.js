@@ -179,6 +179,8 @@ module.exports = {
  find_info: '_Title_ : *{}*\n_Artists_ : *{}*\n_Released_ : *{}*\n_Album_ : *{}*\n_Genres_ : {}',
  upload_url: '_Please enter a url of an uploaded image!_',
  upload_url_inv: '*❌ Invalid url, Please enter a valid url of an uploaded image!*',
+ missing_key_imgbb: '*You haven\'t provided a imgbb apikey yet.*\n_You can get a imgbb apikey from_ https://api.imgbb.com/',
+ inv_key_imgbb: '*Provided key is invalid or expired!*\n_You can get another by signing up a new account._ https://api.imgbb.com/',
  unable_down: '*❌ Unable to download!*',
  unable_download: '*❌ Unable to download. Entered url may be not direct or invalid!*',
  searching: '*🔎 Searching...*',
@@ -213,6 +215,7 @@ module.exports = {
  only_text_greet: '*❌ Reply to any text only!*',
  suc_greet: '*✅ Successfully set {} message!*',
  alive_message: '*Hey {},*\n*I\'m still alive!*',
+ error_message: '*ERROR LOG*\n\n_An error occurred! You can open an issue on TOXIC-DEVIL/Leon for a fix._\n*Open an issue:* https://bit.ly/43kG9jU\n\n*Error:* ```{}```',
  alive_footer: '_Name_ : *{}*\n_ID_ : *{}*\n_Number_ : *{}*\n_Total Commands_ : *{}*',
  menu: 'MENU'
 };
