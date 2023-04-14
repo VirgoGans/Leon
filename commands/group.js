@@ -1,5 +1,5 @@
 let { onCommand, loadLanguage } = require('../main/');
-let { kick_desc, add_desc, link_desc, revoke_desc, promote_desc, demote_desc, greet_desc, mute_desc, unmute_desc, tagall_desc, gcinfo_desc, tag_desc, need_rm, added, kicked, promoted, demoted, kick_myself, promote_myself, demote_myself, revoked, gc_link, sender_not_admin, me_not_admin, muted, unmuted, need_add, no_type_greet, gcinfo, del_desc, leave_desc, del_reply, leaving, leaving_from, reply_greet, need_replymsg, unsupported_replymsg } = loadLanguage();
+let { kick_desc, add_desc, link_desc, revoke_desc, promote_desc, demote_desc, greet_desc, mute_desc, unmute_desc, tagall_desc, gcinfo_desc, tag_desc, need_rm, added, kicked, promoted, demoted, kick_myself, promote_myself, demote_myself, revoked, gc_link, sender_not_admin, me_not_admin, muted, unmuted, need_add, no_type_greet, suc_greet, only_text_greet, invalid_type_greet, deleted_type_greet, already_off_type, gcinfo, del_desc, leave_desc, del_reply, leaving, leaving_from, reply_greet, need_replymsg, unsupported_replymsg } = loadLanguage();
 let greetings = require('../database/greetings');
 
 onCommand(
@@ -148,7 +148,7 @@ onCommand(
   if (!msg.isAdmin(msg.sender)) return await msg.reply(sender_not_admin);
   if (!text[1]) return await msg.reply(no_type_greet);
   if (text[1].includes(' ') && text[1].split(' ')[1].toLowerCase() == 'delete') {
-   if (text[1].toLowerCase() !== 'welcome' && text[1].toLowerCase() !== 'bye' && text[1].toLowerCase() !== 'promote' && text[1].toLowerCase() !== 'demote') return await msg.reply('*❌ Invalid type, Please enter a valid type from below:*\n*- welcome*\n*- bye*\n*- promote*\n*- demote*');
+   if (text[1].toLowerCase() !== 'welcome' && text[1].toLowerCase() !== 'bye' && text[1].toLowerCase() !== 'promote' && text[1].toLowerCase() !== 'demote') return await msg.reply(invalid_type_greet);
    let isOn = await greetings.getMessage(msg.chat, text[1]);
    if (!isOn) return await msg.reply(already_off_type.format(text[1].toLowerCase()));
    await greetings.deleteMessage(msg.chat, text[1]);
@@ -156,7 +156,7 @@ onCommand(
   }
   if (!msg.replied) return await msg.reply(reply_greet);
   if (!msg.replied.text) return await msg.reply(only_text_greet);
-  if (text[1].toLowerCase() !== 'welcome' && text[1].toLowerCase() !== 'bye' && text[1].toLowerCase() !== 'promote' && text[1].toLowerCase() !== 'demote') return await msg.reply('*❌ Invalid type, Please enter a valid type from below:*\n*- welcome*\n*- bye*\n*- promote*\n*- demote*');
+  if (text[1].toLowerCase() !== 'welcome' && text[1].toLowerCase() !== 'bye' && text[1].toLowerCase() !== 'promote' && text[1].toLowerCase() !== 'demote') return await msg.reply(invalid_type_greet);
   await greetings.GreetingsDB.sync();
   await greetings.setMessage(msg.chat, text[1], msg.replied.text);
   await msg.reply(suc_greet.format(text[1].toLowerCase()));
