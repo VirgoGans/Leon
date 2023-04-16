@@ -1,5 +1,5 @@
 let { onCommand, loadLanguage, fetchJson } = require('../main/');
-let { pp_desc, jid_desc, name_desc, about_desc, block_desc, unblock_desc, blocklist_desc, create_desc, join_desc, info_desc, need_image, need_image_only, need_rt, er_text, suc_name, suc_about, block_already, unblock_already, blocked, unblocked, need_rm, block_list, need_gc_subject, long_gc_subject, suc_created_gc, info_format, need_join_gc, invalid_gclink, unable_join, unable_join_inv } = loadLanguage();
+let { pp_desc, jid_desc, name_desc, about_desc, block_desc, unblock_desc, blocklist_desc, create_desc, join_desc, info_desc, need_image, need_image_only, need_rt, er_text, suc_name, suc_about, block_already, unblock_already, blocked, unblocked, need_rm, block_list, blocklist_null, need_gc_subject, long_gc_subject, suc_created_gc, info_format, need_join_gc, invalid_gclink, unable_join, unable_join_inv } = loadLanguage();
 
 onCommand(
   {
@@ -129,6 +129,7 @@ onCommand(
   }, async (msg, text, client) => {
 
   let blocklist = await client.fetchBlocklist();
+  if (blocklist.length < 1) return await msg.reply(blocklist_null);
   return await msg.reply(block_list + blocklist.map((user) => '@'+user.split('@')[0]).join('\n'));
 });
 
