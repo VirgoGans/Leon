@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 DATABASE_URL = process.env.DATABASE_URL === undefined ? './leon.db' : process.env.DATABASE_URL;
 
 module.exports = {
-    AUTH_ID: process.env.AUTH_ID !== undefined ? process.env.AUTH_ID : Boolean(false),
+    SESSION: process.env.SESSION !== undefined ? process.env.SESSION : 'false',
     PREFIX: process.env.PREFIX !== undefined ? process.env.PREFIX.charAt(0) : '#',
     LANG: process.env.LANGUAGE !== undefined ? process.env.LANGUAGE : 'eng',
     MODE: process.env.MODE !== undefined ? process.env.MODE : 'private',
