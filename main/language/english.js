@@ -102,6 +102,7 @@ module.exports = {
  unblocked_already: '*{} is already unblocked!*',
  blocked: '*☑️ Blocked: {}*',
  unblocked: '*✅ Unblocked: {}*',
+ blocklist_null: '*You haven\'t blocked anyone yet!*',
  block_list: '*You have blocked:*\n',
  mix_need: '_Please enter two emojis by splitting with / symbol!_',
  inv_format_mix: '*❌ Invalid format, Enter two emojis by splitting with / symbol!*',
