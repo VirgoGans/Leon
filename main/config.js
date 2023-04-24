@@ -3,10 +3,10 @@ const { Sequelize } = require('sequelize');
 DATABASE_URL = process.env.DATABASE_URL === undefined ? './leon.db' : process.env.DATABASE_URL;
 
 module.exports = {
-    SESSION: process.env.SESSION !== undefined ? process.env.SESSION : 'false',
+    SESSION: process.env.SESSION !== undefined ? process.env.SESSION : 'true',
     PREFIX: process.env.PREFIX !== undefined ? process.env.PREFIX.charAt(0) : '#',
     LANG: process.env.LANGUAGE !== undefined ? process.env.LANGUAGE : 'eng',
-    MODE: process.env.MODE !== undefined ? process.env.MODE : 'private',
+    MODE: process.env.MODE !== undefined ? process.env.MODE : 'public',
     AUTOSV: process.env.AUTO_STATUSVIEW !== undefined ? process.env.AUTO_STATUSVIEW : 'false',
     OPENAIKEY: process.env.OPENAI_KEY !== undefined ? process.env.OPENAI_KEY : 'false',
     IMGBBKEY: process.env.IMGBB_APIKEY !== undefined ? process.env.IMGBB_APIKEY : 'false',
